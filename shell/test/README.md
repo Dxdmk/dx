@@ -1,3 +1,4 @@
+
 # Server Hardware Info Report Script (服务器硬件信息报告脚本)
 
 这是一个功能强大的Bash脚本，用于检测物理服务器或VPS的详细硬件信息，并生成一份美观、易于阅读的报告。它特别适合服务器管理员、运维工程师以及所有需要在Linux环境下快速了解硬件配置的用户。
@@ -26,24 +27,24 @@
 
 您只需要在您的服务器上以 `root` 权限运行一行命令即可。
 
-**通过 `wget` 运行:**
+**通过 `curl` 运行:**
 ```bash
 bash <(curl -sL https://raw.githubusercontent.com/Dxdmk/dx/refs/heads/main/shell/test/test.sh)
 ```
 
-**通过 `curl` 运行:**
+**通过 `WGET` 运行:**
 ```bash
 bash <(wget -qO- https://raw.githubusercontent.com/Dxdmk/dx/refs/heads/main/shell/test/test.sh)
 ```
 
 
 ### 精简版本(无依赖)
-**通过 `wget` 运行:**
+**通过 `curl` 运行:**
 ```bash
 bash <(curl -sL https://raw.githubusercontent.com/Dxdmk/dx/refs/heads/main/shell/test/test2.sh)
 ```
 
-**通过 `curl` 运行:**
+**通过 `WGET` 运行:**
 ```bash
 bash <(wget -qO- https://raw.githubusercontent.com/Dxdmk/dx/refs/heads/main/shell/test/test2.sh)
 ```
@@ -53,53 +54,107 @@ bash <(wget -qO- https://raw.githubusercontent.com/Dxdmk/dx/refs/heads/main/shel
 
 ```
 ════════════════════════════════════════════════════════════════════════════════
-                                    系统硬件信息报告                                    
+                    系统硬件信息报告
 ════════════════════════════════════════════════════════════════════════════════
 ┌─ 系统信息
 ├──────
-│ 主机名              : 107-174-xxxx-host
-│ 操作系统            : Debian GNU/Linux 12 (bookworm)
-│ 内核版本            : 6.1.0-22-amd64
-│ 运行时间            : 32 minutes
+│ 主机名           : HZ001
+│ 操作系统        : Debian GNU/Linux 12 (bookworm)
+│ 内核版本        : 6.1.0-37-amd64
+│ 运行时间        : 9 days
 └──────────────────────────────────────────────────
 ┌─ 处理器信息
-├───────
-│ 型号                : Intel(R) Xeon(R) CPU E3-1240 v3 @ 3.40GHz
-│ 核心数              : 4
-│ 线程数              : 8
-│ 频率                : 3436.250 MHz
-│ 缓存                : 8192 KB
-│ 使用率              : 0.0%
+├──────
+│ 型号              : AMD Ryzen 9 5950X 16-Core Processor
+│ 核心数           : 16
+│ 线程数           : 32
+│ 频率              : 3400.0000 MHz
+│ 缓存              : 64MiB
+│ 使用率           : 2.9%
 └──────────────────────────────────────────────────
 ┌─ 内存信息
 ├──────
-│ 总计                : 15.58 GB
-│ 已用                : 423Mi
-│ 可用                : 15.16 GB
+│ 总计              : 125Gi
+│ 已用              : 25Gi
+│ 可用              : 100Gi
 │
 │ Memory Modules:
 ├────────────────────────────────────────────────────────────────────────────────────────────────────┤
-│ │ 大小     │ 类型   │ 频率         │ 制造商       │ 序列号          │ 型号                 │
+│ │ 大小   │ 类型 │ 频率       │ 制造商    │ 序列号       │ 型号               │
 ├────────────────────────────────────────────────────────────────────────────────────────────────────┤
-│ │ 4 GB     │ DDR3   │ 1600 MT/s    │ Hynix/Hyunda │ 805D3F91        │ HMT451U7BFR8A-PB     │
-│ │ 4 GB     │ DDR3   │ 1600 MT/s    │ Hynix/Hyunda │ 805D3EED        │ HMT451U7BFR8A-PB     │
+│ │ 32 GB    │ DDR4   │ 2666 MT/s    │ Samsung      │ 01DFAF94        │ M391A4G43AB1-CWE     │
+│ │ 32 GB    │ DDR4   │ 2666 MT/s    │ Samsung      │ 01DFAF11        │ M391A4G43AB1-CWE     │
+│ │ 32 GB    │ DDR4   │ 2666 MT/s    │ Samsung      │ 01DFAE6E        │ M391A4G43AB1-CWE     │
+│ │ 32 GB    │ DDR4   │ 2666 MT/s    │ Samsung      │ 01DFAC97        │ M391A4G43AB1-CWE     │
 └────────────────────────────────────────────────────────────────────────────────────────────────────┘
 └──────────────────────────────────────────────────
 ┌─ 硬盘信息
 ├──────
-│ /dev/sda1       1.8T  1.2G  1.7T   1% /
 │
 │ Physical Disks Details:
-││ ═══ /dev/sda ═══
-│   Basic Info:        1.7T SAMSUNG MZ7LM1T9HMJP-00003
-│   SMART状态:         PASSED
-│   通电时间:           32680 hours
+││ ═══ /dev/nvme1n1 ═══
+│   Basic Info:     3.5TB SAMSUNG MZQL23T8HCLS-00A07
+│   SMART状态:    PASSED
+│   通电时间:   32567 hours
 │   Data Transfer Statistics:
-│     总读取量:         10.690 TB (SMART硬件累计)
-│     总写入量:         61.603 TB (SMART硬件累计)
-│   温度:               46°C
+│     总读取量:   925.798TB (SMART硬件累计)
+│     总写入量:   109.138TB (SMART硬件累计)
+│   磨损程度:   3%
+│   温度:         38°C
+││ ═══ /dev/nvme0n1 ═══
+│   Basic Info:     3.5TB SAMSUNG MZQL23T8HCLS-00A07
+│   SMART状态:    PASSED
+│   通电时间:   26712 hours
+│   Data Transfer Statistics:
+│     总读取量:   908.172TB (SMART硬件累计)
+│     总写入量:   85.028TB (SMART硬件累计)
+│   磨损程度:   2%
+│   温度:         40°C
 └──────────────────────────────────────────────────
-... (更多信息)
+┌─ 网卡信息
+├──────
+│
+│ ═══ enp7s0 ═══
+│ 型号              : Intel Corporation I210 Gigabit Network Connection (rev 03)
+│ 状态              : UP
+│ IPv4                : xx/26
+│ IPv6                : 2a01:4f8:xxx:xxx::2/64
+│                       fe80::7e10:xxx:xxx:xxx64
+│ MAC地址           : 7c:10:c9:21:f1:c3
+│ 速度              : 1000Mb/s
+│ 双工模式        : Full
+│ 链接检测        : yes
+│ RX                  : 36.91TB
+│ TX                  : 72.93TB
+└──────────────────────────────────────────────────
+┌─ 显卡信息
+├──────
+│ Graphics Cards (PCI):
+│   06:00.0 VGA compatible controller: ASPEED Technology, Inc. ASPEED Graphics Family (rev 41)
+│
+│ Display Hardware Summary:
+│   ============================================================
+│          description: VGA compatible controller
+│          product: ASPEED Graphics Family
+│          vendor: ASPEED Technology, Inc.
+│          physical id: 0
+│          bus info: pci@0000:06:00.0
+│          width: 32 bits
+│          clock: 33MHz
+│          capabilities: pm msi vga_controller bus_master cap_list rom fb
+│          configuration: depth=32 driver=ast latency=0 resolution=1280,1024
+│          resources: irq:34 memory:f8000000-fbffffff memory:fc000000-fc01ffff ioport:f000(size=128) memory:c0000-dffff
+└──────────────────────────────────────────────────
+┌─ 主板信息
+├──────
+│ 厂商              : ASUSTeK COMPUTER INC.
+│ 型号              : Pro WS 565-ACE
+│ Version             : Rev X.0x
+│
+│ BIOS Vendor         : American Megatrends Inc.
+│ BIOS Version        : 3606
+└──────────────────────────────────────────────────
+报告生成完成！
 ```
 
 ## 📜 版本历史 (Changelog)
