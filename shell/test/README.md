@@ -22,6 +22,8 @@
 
 ## 🚀 使用方法 (Usage)
 
+### 完全版本(自动安装依赖)
+
 您只需要在您的服务器上以 `root` 权限运行一行命令即可。
 
 **通过 `wget` 运行:**
@@ -33,7 +35,19 @@ bash <(curl -sL https://raw.githubusercontent.com/Dxdmk/dx/refs/heads/main/shell
 ```bash
 bash <(wget -qO- https://raw.githubusercontent.com/Dxdmk/dx/refs/heads/main/shell/test/test.sh)
 ```
-> **注意**: 请将 `YOUR_USERNAME/YOUR_REPO` 替换为您在GitHub上的实际用户名和仓库名。脚本需要 `root` 权限才能访问底层的硬件信息。
+
+
+### 精简版本(无依赖)
+**通过 `wget` 运行:**
+```bash
+bash <(curl -sL https://raw.githubusercontent.com/Dxdmk/dx/refs/heads/main/shell/test/test2.sh)
+```
+
+**通过 `curl` 运行:**
+```bash
+bash <(wget -qO- https://raw.githubusercontent.com/Dxdmk/dx/refs/heads/main/shell/test/test2.sh)
+```
+
 
 ## 📋 报告预览 (Preview)
 
